@@ -67,3 +67,127 @@ const observer = new IntersectionObserver(
   { threshold: 0.08 }
 );
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ── LIGHTBOX ──
+(function () {
+  const lb = document.getElementById('lightbox');
+  if (!lb) return;
+  const lbImg = document.getElementById('lb-img');
+  const lbCaption = document.getElementById('lb-caption');
+  const lbCounter = document.getElementById('lb-counter');
+  const lbClose = document.getElementById('lb-close');
+  const lbPrev = document.getElementById('lb-prev');
+  const lbNext = document.getElementById('lb-next');
+  let items = [];
+  let current = 0;
+
+  function show(idx) {
+    current = (idx + items.length) % items.length;
+    const item = items[current];
+    lbImg.src = item.src;
+    lbImg.alt = item.alt || '';
+    if (lbCaption) lbCaption.textContent = item.caption;
+    if (lbCounter) lbCounter.textContent = `${current + 1} / ${items.length}`;
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lb.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.gallery-item').forEach((el, i) => {
+    const img = el.querySelector('.gallery-img');
+    if (!img) return;
+    const cap = el.querySelector('.gallery-caption');
+    items.push({ src: img.src, alt: img.alt, caption: cap ? cap.textContent : img.alt });
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => show(i));
+  });
+
+  if (!items.length) return;
+  lbClose.addEventListener('click', close);
+  lbPrev.addEventListener('click', () => show(current - 1));
+  lbNext.addEventListener('click', () => show(current + 1));
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('active')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+})();
+
+// ── FAQ ACCORDION ──
+(function () {
+  document.querySelectorAll('.faq-cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.cat;
+      document.querySelectorAll('.faq-cat-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.faq-section').forEach(s => s.classList.remove('active'));
+      btn.classList.add('active');
+      const section = document.getElementById('faq-' + target);
+      if (section) section.classList.add('active');
+    });
+  });
+
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      item.closest('.faq-list')?.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+})();
+
+// ── GALLERY CATEGORY TABS ──
+(function () {
+  document.querySelectorAll('.gallery-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cat = btn.dataset.cat;
+      document.querySelectorAll('.gallery-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        if (cat === 'all' || item.dataset.category === cat) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    });
+  });
+})();
+
+// ── CONTACT FORM AJAX ──
+(function () {
+  const form = document.querySelector('.contact-form');
+  const success = document.getElementById('form-success');
+  if (!form || !success) return;
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = form.querySelector('[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.reset();
+        success.style.display = 'block';
+        btn.style.display = 'none';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Send Request';
+        alert('Something went wrong. Please try again or email directly.');
+      }
+    } catch {
+      btn.disabled = false;
+      btn.textContent = 'Send Request';
+    }
+  });
+})();

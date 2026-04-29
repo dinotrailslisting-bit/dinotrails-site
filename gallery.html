@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery | Dino Trails Getaway — Jensen, Utah</title>
+  <meta name="description" content="Full property photo gallery for Dino Trails Getaway. Interior bedrooms, exterior compound, outdoor amenities, and event center. 80-guest group hospitality compound at the gateway to Dinosaur National Monument, Jensen, Utah.">
+  <meta property="og:title" content="Photo Gallery | Dino Trails Getaway">
+  <meta property="og:description" content="Interior, exterior, and amenity photos for this 80-guest compound on 4 private acres in Jensen, Utah. Click any image to view full screen.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- PASSWORD GATE -->
+  <div id="password-gate">
+    <div class="gate-box">
+      <p class="gate-eyebrow">Dino Trails Getaway &nbsp;·&nbsp; Jensen, Utah</p>
+      <h2 class="gate-title">Site Under Development</h2>
+      <div class="gate-divider"></div>
+      <p class="gate-sub">This marketing site is being prepared for listing. Enter the access password to preview.</p>
+      <input type="password" id="gate-input" class="gate-input" placeholder="Enter password" autocomplete="off">
+      <button class="gate-btn" id="gate-btn">Access Preview</button>
+      <p class="gate-error" id="gate-error"></p>
+    </div>
+  </div>
+
+  <!-- DEV BANNER -->
+  <div id="dev-banner">
+    Site under development &nbsp;·&nbsp; For authorized preview only &nbsp;·&nbsp; Not yet public
+    <a id="gate-logout" title="Lock site">Lock</a>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-brand">Dino Trails Getaway</div>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html#opportunity">Opportunity</a></li>
+        <li><a href="index.html#property">Property</a></li>
+        <li><a href="index.html#financials">Financials</a></li>
+        <li><a href="index.html#market">Market</a></li>
+        <li><a href="index.html#location">Location</a></li>
+        <li><a href="area-guide.html">Area Guide</a></li>
+        <li><a href="groups.html">For Groups</a></li>
+        <li><a href="investment.html">Investment</a></li>
+        <li><a href="gallery.html" class="nav-active">Gallery</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Request Info</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero-seamless">
+    <div class="container">
+      <span class="page-hero-eyebrow">Dino Trails Getaway &nbsp;·&nbsp; Jensen, Utah</span>
+      <h1>Photo Gallery</h1>
+      <p class="page-hero-sub">Full property photography across both lodges, the event center, and the 4-acre compound. Click any image to open the full-screen viewer. View live listings for the complete photo library.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ GALLERY ══════════════════════ -->
+  <section class="page-section" style="padding-top:48px;">
+    <div class="container">
+
+      <!-- CATEGORY TABS -->
+      <div class="gallery-tabs fade-in">
+        <button class="gallery-tab active" data-cat="all">All Photos (15)</button>
+        <button class="gallery-tab" data-cat="exterior">Exterior &amp; Grounds (6)</button>
+        <button class="gallery-tab" data-cat="interior">Interior (7)</button>
+        <button class="gallery-tab" data-cat="amenities">Amenities (2)</button>
+      </div>
+
+      <!-- PHOTO GRID -->
+      <div class="gallery-grid fade-in">
+
+        <div class="gallery-item" data-category="exterior">
+          <img src="images/gallery/01.jpg" alt="South Lodge exterior" class="gallery-img" loading="lazy">
+          <div class="gallery-caption">South Lodge &mdash; exterior front view, the property&rsquo;s flagship 5.0&#9733; Guest Favorite lodge</div>
+        </div>
+
+        <div class="gallery-item" data-category="exterior">
+          <img src="images/gallery/02.jpg" alt="North Lodge exterior" class="gallery-img" loading="lazy">
+          <div class="gallery-caption">North Lodge &mdash; exterior with clubhouse addition completed May 2023</div>
+        </div>
+
+        <div class="gallery-item" data-category="interior">
+          <img src="images/gallery/03.jpg" alt="Interior common area" class="gallery-img" loading="lazy">
+          <div class="gallery-caption">South Lodge common area &mdash; spacious gathering room for multi-generational groups</div>
+        </div>
+
+        <div class="gallery-item" data-category="interior">
+          <img src="images/gallery/04.jpg" alt="Themed bedroom" class="gallery-img" loading="lazy">
+          <div class="gallery-caption">Themed bedroom &mdash; one of 16 uniquely decorated rooms across both lodges</div>
+        </div>
+
+        <div class="gallery-item" data-category="interior">
+          <img src="images/gallery/05.jpg" alt="Interior living space" class="gallery-img" loading="lazy">
+          <div class="gallery-caption">Interior living space &mdash; the warm, inviting aesthetic that drives repeat bookings</div>
+        </div>
+
+        <div class="gallery-item" data-category="interior">
+          <img src="images/gallery/06.jpg" alt="Kitchen and dining" class="gallery-img" loading="lazy">
+          <div class="gallery-caption">Full kitchen &mdash; one of three kitchens with multiple refrigerators and ovens for large group catering</div>
+        </div>
+
+        <div class="gallery-item" data-category="exterior">
+          <img src="images/gallery/07.jpg" alt="Outdoor space" class="gallery-img" loading="lazy">
+          <div class="gallery-caption">Outdoor compound &mdash; 4 private acres with open pastoral views and room for kids to run</div>
+        </div>
+
+        <div class="gallery-item" data-category="exterior">
+          <img src="images/gallery/08.jpg" alt="Grounds and acreage" class="gallery-img" loading="lazy">
+          <div class="gallery-caption">Property grounds &mdash; adjacent agricultural fields with deer and buffalo frequently nearby</div>
+        </div>
+
+        <div class="gallery-item" data-category="interior">
+          <img src="images/gallery/09.jpg" alt="Bedroom detail" class="gallery-img" loading="lazy">
+          <div class="gallery-caption">Bedroom detail &mdash; South Lodge themed accommodations with thoughtful decor throughout</div>
+        </div>
+
+        <div class="gallery-item" data-category="exterior">
+          <img src="images/gallery/10.jpg" alt="Property exterior" class="gallery-img" loading="lazy">
+          <div class="gallery-caption">Property exterior &mdash; the private compound setting that guests describe as &ldquo;safe and secluded&rdquo;</div>
+        </div>
+
+        <div class="gallery-item" data-category="interior">
+          <img src="images/gallery/11.jpg" alt="Common gathering space" class="gallery-img" loading="lazy">
+          <div class="gallery-caption">Common gathering space &mdash; accommodates 80+ guests comfortably across both lodges</div>
+        </div>
+
+        <div class="gallery-item" data-category="amenities">
+          <img src="images/gallery/12.jpg" alt="Outdoor amenities" class="gallery-img" loading="lazy">
+          <div class="gallery-caption">Outdoor amenities &mdash; sand volleyball court, fire pit, and BBQ areas that no Vernal hotel can match</div>
+        </div>
+
+        <div class="gallery-item" data-category="interior">
+          <img src="images/gallery/13.jpg" alt="Event center" class="gallery-img" loading="lazy">
+          <div class="gallery-caption">Event center &mdash; converted warehouse with commercial kitchen, dining for 40+, and entertainment area</div>
+        </div>
+
+        <div class="gallery-item" data-category="amenities">
+          <img src="images/gallery/14.jpg" alt="Patio and fire pit" class="gallery-img" loading="lazy">
+          <div class="gallery-caption">Large patio with gas fireplace &mdash; the evening gathering spot for reunions and group events</div>
+        </div>
+
+        <div class="gallery-item" data-category="exterior">
+          <img src="images/gallery/15.jpg" alt="Site overview" class="gallery-img" loading="lazy">
+          <div class="gallery-caption">Site overview &mdash; 4.01 acres across three contiguous parcels, Jensen, Utah 84035</div>
+        </div>
+
+      </div>
+
+      <!-- LISTING LINKS -->
+      <div class="airbnb-section fade-in" style="margin-top:48px;">
+        <p class="airbnb-label">View Full Photo Libraries on Live Listings</p>
+        <div class="airbnb-links">
+          <a href="https://www.airbnb.com/rooms/49446318" target="_blank" rel="noopener" class="airbnb-badge">
+            <span class="stars">&#9733;</span> South Lodge &mdash; 5.0&#9733; Guest Favorite &middot; 26 reviews
+          </a>
+          <a href="https://www.airbnb.com/rooms/837042915139661099" target="_blank" rel="noopener" class="airbnb-badge">
+            <span class="stars">&#9733;</span> North Lodge &mdash; 4.88&#9733; Airbnb &middot; 9.8/10 VRBO &middot; 16 reviews
+          </a>
+          <a href="https://www.dinosaurtrails.com" target="_blank" rel="noopener" class="airbnb-badge">
+            &#127760; dinosaurtrails.com
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CTA ══════════════════════ -->
+  <section class="page-section-alt">
+    <div class="container container-narrow">
+      <div class="cta-strip fade-in">
+        <h3>Schedule a property tour</h3>
+        <p>Physical showings are available at buyer&rsquo;s convenience. See both lodges, the event center, and the full compound in person. Contact the listing agent to arrange a visit.</p>
+        <a href="index.html#contact" class="btn">Request Information</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <div class="footer-agent">
+        <p class="footer-name">Stockton Farnsworth</p>
+        <p>RE/MAX Associates Commercial</p>
+        <p>Phone: <a href="tel:8016643370">(801) 664-3370</a></p>
+        <p>Email: <a href="mailto:stockton@teamutahcre.com">stockton@teamutahcre.com</a></p>
+        <p style="margin-top:10px;font-size:0.8rem;color:rgba(255,255,255,0.5)">
+          Robert Farnsworth &middot; (801) 898-8810<br>
+          Ashlee Bonham &middot; (801) 602-6850<br>
+          Randy Cummins &middot; (801) 641-8004
+        </p>
+      </div>
+      <div class="footer-office">
+        <p>6955 Union Park Center Drive</p>
+        <p>Suite 140</p>
+        <p>Salt Lake City, UT 84047</p>
+        <p class="footer-remax">Each Office Independently Owned and Operated</p>
+      </div>
+      <div class="footer-disclaimer">
+        <p>This information has been obtained from sources believed reliable. No warranty or representation, expressed or implied, is made as to its accuracy. Financial information reflects 2024 actual operating results for Dinosaur Trails Rental LLC as supplied by the Seller. Forward-looking projections are illustrative only. All figures are subject to verification. Buyer to conduct own due diligence.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <button id="lb-close" aria-label="Close">&#10005;</button>
+    <button id="lb-prev" aria-label="Previous">&#8249;</button>
+    <img id="lb-img" src="" alt="">
+    <div id="lb-caption"></div>
+    <div id="lb-counter"></div>
+    <button id="lb-next" aria-label="Next">&#8250;</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
