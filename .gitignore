@@ -2,3 +2,8 @@
 .DS_Store
 node_modules/
 *.log
+build_handoff_doc.js
+package.json
+package-lock.json
+Dino_Trails_Site_Handoff.docx
+~$*.docx
