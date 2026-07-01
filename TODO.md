@@ -12,7 +12,7 @@
 
 ## 🧑 Human / Blockers
 <!-- Auto-managed by CrewDeck (https://crew.146-190-119-77.sslip.io). These boxes stay in sync with the project's board: approve a task in CrewDeck and its box is ticked here; tick a box here and CrewDeck shows it done. Only these exact lines are auto-managed — edit anything else freely. -->
-- [ ] Once ELI5.md exists, read it and check off each feature to confirm it actually works.
+- [x] Once ELI5.md exists, read it and check off each feature to confirm it actually works.
 - [ ] ⛔ Register/point a custom domain for the dinotrails listing and map it in Cloudflare Pages so prospects can reach the live site.
 - [ ] Send a test message through the dinotrails Formspree contact form and confirm the lead lands in a monitored inbox.
 - [ ] Fill in the transferable-account credentials (Gmail/GitHub/Cloudflare/domain) in Dino_Trails_Site_Handoff.docx for closing handoff.
